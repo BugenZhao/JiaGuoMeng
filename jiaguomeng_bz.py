@@ -103,11 +103,11 @@ startDict = {1: 1, 2: 2, 3: 6, 4: 24}
 # TODO !!!
 start = dict()
 for item in commercial:  # 商业
-    start[item] = startDict[star[item]] * (0.2 + 0.3 + 1 + 1 + 3 + 0.2 + 0.05 + 0.05) * 1.1
+    start[item] = startDict[star[item]] * (1 + 1 + 3 + 0.5 + 0.1) * (1 + 0.1 + 0.3 + 0.1)
 for item in industry:  # 工业
-    start[item] = startDict[star[item]] * (1 + 0.2 + 1 + 0.2 + 0.05 + 0.05) * 1.7
+    start[item] = startDict[star[item]] * (1 + 1 + 0.5 + 0.1) * (1 + 0.3 + 0.1 + 0.3 + 0.1)
 for item in residence:  # 住宅
-    start[item] = startDict[star[item]] * (1 + 1 + 3 + 0.2 + 0.4 + 0.05 + 0.05) * 1.1
+    start[item] = startDict[star[item]] * (1 + 1 + 3 + 0.5 + 0.1) * (1 + 0.1 + 0.1)
 
 # 收益调整
 start['平房'] *= 1.1
