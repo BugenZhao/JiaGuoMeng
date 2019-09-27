@@ -67,13 +67,17 @@ buffs_res = {'人才公寓': [.2, .4, .6],
 
 # TODO !!!
 
-residence = '木屋 居民楼 钢结构房 平房'.split()
+residence = '木屋 居民楼 钢结构房 平房 人才公寓'.split()
 commercial = '便利店 五金店 服装店 菜市场 学校 图书城 民食斋'.split()
-industry = '木材厂 食品厂 造纸厂 电厂 钢铁厂 纺织厂 零件厂'.split()
+industry = '木材厂 食品厂 造纸厂 电厂 钢铁厂 纺织厂 零件厂 企鹅机械'.split()
 
-OneStars = '电厂 钢铁厂 零件厂 民食斋 木屋'.split()
-TwoStars = '纺织厂 平房 便利店 服装店 图书城 菜市场 学校 木材厂 造纸厂'.split()
-TriStars = '居民楼 食品厂 钢结构房 五金店'.split()
+# residence = '木屋 居民楼 钢结构房 平房 小型公寓 人才公寓 中式小楼'.split()
+# commercial = '便利店 五金店 服装店 菜市场 学校 图书城 民食斋 媒体之声'.split()
+# industry = '木材厂 食品厂 造纸厂 水厂 电厂 钢铁厂 纺织厂 零件厂 企鹅机械'.split()
+
+OneStars = '电厂 钢铁厂 零件厂 民食斋 人才公寓 企鹅机械'.split()
+TwoStars = '纺织厂 服装店 木屋 图书城 学校'.split()
+TriStars = '居民楼 食品厂 便利店 木材厂 平房 菜市场 钢结构房 五金店 造纸厂'.split()
 
 star = dict()
 for item in OneStars:
@@ -103,11 +107,11 @@ startDict = {1: 1, 2: 2, 3: 6, 4: 24}
 # TODO !!!
 start = dict()
 for item in commercial:  # 商业
-    start[item] = startDict[star[item]] * (1 + 1 + 3 + 0.5 + 0.1) * (1 + 0.1 + 0.3 + 0.1)
+    start[item] = startDict[star[item]] * (1 + 1 + 3 + 1 + 0.5 + 0.1) * (1 + 0.6 + 0.4 + 0.6)
 for item in industry:  # 工业
-    start[item] = startDict[star[item]] * (1 + 1 + 0.5 + 0.1) * (1 + 0.3 + 0.1 + 0.3 + 0.1)
+    start[item] = startDict[star[item]] * (1 + 1 + 1 + 0.5 + 1.5 + 0.1) * (1 + 0.6 + 0.4 + 1.5)
 for item in residence:  # 住宅
-    start[item] = startDict[star[item]] * (1 + 1 + 3 + 0.5 + 0.1) * (1 + 0.1 + 0.1)
+    start[item] = startDict[star[item]] * (1 + 1 + 3 + 1 + 0.5 + 0.1) * (1 + 0.6 + 0.4 + 1.2)
 
 # 收益调整
 start['平房'] *= 1.1
@@ -116,8 +120,8 @@ start['民食斋'] *= 1.52
 # 任务加成调整!!!!!
 # TODO !!!
 # start['加油站'] *= 2
-start['服装店'] *= 2
-start['五金店'] *= 2.5
+start['钢铁厂'] *= 2.5
+start['造纸厂'] *= 2
 
 
 # start['小型公寓'] *= 2
